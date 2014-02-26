@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
 
     root_vm.vm.provision "ansible" do |ansible|
       ansible.limit = "root"
-      ansible.playbook = "vagrant.yml"
+      ansible.playbook = "books/vagrant.yml"
       ansible.inventory_path = "local.inv"
       ansible.sudo = true
     end
@@ -31,7 +31,7 @@ Vagrant.configure("2") do |config|
 
     s1.vm.provision "ansible" do |ansible|
       ansible.limit = "s1"
-      ansible.playbook = "vagrant.yml"
+      ansible.playbook = "books/vagrant.yml"
       ansible.inventory_path = "local.inv"
       ansible.sudo = true
     end
@@ -47,7 +47,7 @@ Vagrant.configure("2") do |config|
 
     s2.vm.provision "ansible" do |ansible|
       ansible.limit = "s2"
-      ansible.playbook = "vagrant.yml"
+      ansible.playbook = "books/vagrant.yml"
       ansible.inventory_path = "local.inv"
       ansible.sudo = true
     end

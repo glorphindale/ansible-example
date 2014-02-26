@@ -1,0 +1,12 @@
+---
+# Use what is closer to to you
+- name: add closer repositories
+  apt_repository: repo='deb http://mirror.yandex.ru/ubuntu lucid main' state=present
+
+- name: install common packages
+  apt: pkg={{ item }} state=installed
+  with_items:
+    - htop
+    - vim
+    - tmux
+    - wget
