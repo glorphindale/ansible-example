@@ -23,3 +23,6 @@ Tail the syslog on the root node
 Install common packages:
 
      ansible-playbook books/common.yml -i local.inv
+
+## Resources
+For more information see [https://www.digitalocean.com/community/articles/how-to-create-ansible-playbooks-to-automate-system-configuration-on-ubuntu](Digital Ocean guide).
