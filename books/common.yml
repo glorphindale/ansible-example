@@ -5,3 +5,10 @@
   sudo: True
   roles:
     - common
+
+- hosts: root
+  user: bear
+  gather_facts: no
+  sudo: True
+  roles:
+    - nginx

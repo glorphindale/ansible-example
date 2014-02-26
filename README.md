@@ -1,3 +1,4 @@
+## Installation
 Key generation:
 
     ssh-keygen -t dsa -f .ssh
@@ -17,3 +18,8 @@ Tired of specifying private key? Use
 Tail the syslog on the root node
 
     ansible root -a "sudo tail -n 10 /var/log/syslog" -i local.inv -u bear
+
+## Regular operations
+Install common packages:
+
+     ansible-playbook books/common.yml -i local.inv

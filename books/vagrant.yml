@@ -11,7 +11,7 @@
       tags: general
 
     - name: add key-based ssh
-      authorized_key: user=bear key="{{ lookup('file', '.ssh.pub') }}" state=present
+      authorized_key: user=bear key="{{ lookup('file', '../.ssh.pub') }}" state=present
 
     # Lucid does not include following packages needed for the 'apt' module
     - name: install mandatory packages
