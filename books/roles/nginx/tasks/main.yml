@@ -3,3 +3,15 @@
   apt: package=nginx state=installed update_cache=true
   notify:
     - start nginx
+
+- name: install custom site
+  template: src=sample-site.conf dest=/etc/nginx/sites-available/sample-site.conf
+  register: custom_site
+
+- name: update symlink
+  file: src=/etc/nginx/sites-available/sample-site.conf dest=/etc/nginx/sites-enabled/sample-site.conf state=link
+  register: symlink
+
+- name: reload nginx config
+  service: name=nginx state=reloaded
+  when: custom_site.changed or symlink.changed

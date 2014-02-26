@@ -4,7 +4,7 @@ s1
 s2
 
 [all:vars]
-installation=local
+bear_location=local
 
 [root]
 192.168.2.30
