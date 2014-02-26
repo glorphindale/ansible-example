@@ -1,0 +1,16 @@
+[all:children]
+root
+s1
+s2
+
+[all:vars]
+installation=production
+
+[root]
+root.server
+
+[s1]
+s1.server
+
+[s2]
+s1.server
